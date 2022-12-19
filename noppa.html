@@ -1,0 +1,80 @@
+<html>
+<meta charset="utf-8">
+<body>
+  <script>
+
+    function myFunction(){
+
+      // arvotaan kaksi eri lukua väliltä 1-6
+      var x = Math.floor((Math.random() * 6) + 1);
+      var y = Math.floor((Math.random() * 6) + 1);
+
+      // näytetään kuva ensimmäiselle nopalle 
+        if(x==1){
+          document.getElementById('kuva1').src = "img/1.JPG";
+        }
+        else if(x==2){
+          document.getElementById('kuva1').src = "img/2.JPG";
+        }
+        else if(x==3){
+          document.getElementById('kuva1').src = "img/3.JPG";
+        }
+        else if(x==4){
+          document.getElementById('kuva1').src = "img/4.JPG";
+        }
+        else if(x==5){
+          document.getElementById('kuva1').src = "img/5.JPG";
+        }
+        else if(x==6){
+          document.getElementById('kuva1').src = "img/6.JPG";
+        }
+
+
+      // näytetään kuva toiselle nopalle
+        if(y==1){
+          document.getElementById('kuva2').src = "img/1.JPG";
+        }
+        else if(y==2){
+          document.getElementById('kuva2').src = "img/2.JPG";
+        }
+        else if(y==3){
+          document.getElementById('kuva2').src = "img/3.JPG";
+        }
+        else if(y==4){
+          document.getElementById('kuva2').src = "img/4.JPG";
+        }
+        else if(y==5){
+          document.getElementById('kuva2').src = "img/5.JPG";
+        }
+        else if(y==6){
+          document.getElementById('kuva2').src = "img/6.JPG";
+        }
+		
+		  // numerot näytetään selaimella
+        document.getElementById("para1").innerHTML = x;
+        document.getElementById("para2").innerHTML = y;
+
+      //onko parit
+        if(x==y){
+        alert("Parit!");
+        }
+    }
+
+  </script>
+
+  <fieldset>
+    <legend><b> Noppapeli</b></legend>
+    <br/>
+      <form>
+
+        <input type="button" value="Arvo luvut" onclick="myFunction();"/>
+      </form>
+      <p id="para1">Noppa1</p>
+      <p id="para2">Noppa2</p>
+
+      <img src="" id="kuva1" alt="" width="50px"/>
+      <img src="" id="kuva2" alt="" width="50px"/>
+
+  </fieldset>
+</body>
+</html>
